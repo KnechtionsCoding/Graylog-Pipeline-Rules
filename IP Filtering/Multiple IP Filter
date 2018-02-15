@@ -1,0 +1,8 @@
+rule "Carbon Black Sensor IP"
+when
+    cidr_match("IP to filter/32", to_ip($message.dest_ip))
+    ||
+    cidr_match("IP to filter/32", to_ip($message.dest_ip))
+then
+    drop_message();
+end
