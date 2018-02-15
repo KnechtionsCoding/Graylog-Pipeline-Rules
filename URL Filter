@@ -1,0 +1,6 @@
+rule "URL TO FILTER"
+when
+    contains(to_string($message.message), "www.google.com")
+then
+    drop_message();
+end
